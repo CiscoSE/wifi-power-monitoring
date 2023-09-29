@@ -1,0 +1,4 @@
+sites:
+  zones:
+    - switches
+    - aps

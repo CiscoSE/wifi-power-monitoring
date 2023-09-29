@@ -1,0 +1,11 @@
+broker:
+  username: mqttclient
+  password: TchangemeY5E3.!F
+  destination: thingsboard
+  port: 1883
+api:
+  username: tenant@thingsboard.org
+  password: tenant
+  url: http://thingsboard:9090/api
+customer:
+  name: TestCustomer

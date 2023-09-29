@@ -1,0 +1,341 @@
+{
+  "title": "Large venue - APs - Energy - monthly",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "",
+    "widgets": {
+      "82d71a3a-4b17-61b7-52a4-5349d9c98a9b": {
+        "isSystemType": false,
+        "bundleAlias": "test2",
+        "typeAlias": "timeseries_aggregation_per_month_sum_over_series",
+        "type": "timeseries",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 8,
+        "sizeY": 5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "9a0e5ea3-e3ab-543b-9b04-ead24d7444d1",
+              "filterId": "5a10238b-853b-a09e-d8db-9cf9db39968f",
+              "dataKeys": [
+                {
+                  "name": "PoE",
+                  "type": "timeseries",
+                  "label": "${entityName}",
+                  "color": "#f35221",
+                  "settings": {
+                    "excludeFromStacking": false,
+                    "hideDataByDefault": false,
+                    "disableDataHiding": false,
+                    "removeFromLegend": true,
+                    "showLines": false,
+                    "fillLines": false,
+                    "showPoints": false,
+                    "showPointShape": "circle",
+                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                    "showPointsLineWidth": 10,
+                    "showPointsRadius": 1,
+                    "showSeparateAxis": false,
+                    "axisPosition": "left",
+                    "thresholds": [
+                      {
+                        "thresholdValueSource": "predefinedValue"
+                      }
+                    ],
+                    "comparisonSettings": {
+                      "showValuesForComparison": true
+                    }
+                  },
+                  "_hash": 0.7570498930684312,
+                  "units": "kWh",
+                  "decimals": 2,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "// Take the average Wattage of an hour and convert it to kWh\nreturn (value/1000); // /1000 -> kW (J/s)",
+                  "aggregationType": null
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "hideInterval": false,
+            "hideAggregation": false,
+            "hideAggInterval": false,
+            "hideTimezone": false,
+            "selectedTab": 1,
+            "history": {
+              "historyType": 2,
+              "timewindowMs": 31536000000,
+              "interval": 1000,
+              "fixedTimewindow": {
+                "startTimeMs": 1656602687951,
+                "endTimeMs": 1656689087951
+              },
+              "quickInterval": "CURRENT_YEAR"
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 50000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "shadowSize": 4,
+            "fontColor": "#545454",
+            "fontSize": 10,
+            "xaxis": {
+              "showLabels": true,
+              "color": "#545454"
+            },
+            "yaxis": {
+              "showLabels": true,
+              "color": "#545454",
+              "tickDecimals": 0
+            },
+            "grid": {
+              "color": "#545454",
+              "tickColor": "#DDDDDD",
+              "verticalLines": true,
+              "horizontalLines": true,
+              "outlineWidth": 1
+            },
+            "stack": false,
+            "tooltipIndividual": false,
+            "defaultBarWidth": 800000000,
+            "barAlignment": "center",
+            "tooltipCumulative": false,
+            "hideZeros": false,
+            "showTooltip": true,
+            "comparisonEnabled": false,
+            "timeForComparison": "previousInterval",
+            "xaxisSecond": {
+              "axisPosition": "top",
+              "showLabels": true
+            },
+            "customLegendEnabled": false
+          },
+          "title": "Total Energy - agg per month",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": false,
+          "displayTimewindow": true,
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "widgetCss": "",
+          "units": "kWh",
+          "noDataDisplayMessage": "",
+          "showLegend": true,
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": false,
+            "showMax": false,
+            "showAvg": true,
+            "showTotal": false
+          },
+          "pageSize": 1024,
+          "decimals": 2
+        },
+        "row": 0,
+        "col": 0,
+        "id": "82d71a3a-4b17-61b7-52a4-5349d9c98a9b"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Large venue - APs - Energy - monthly",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "82d71a3a-4b17-61b7-52a4-5349d9c98a9b": {
+                "sizeX": 12,
+                "sizeY": 9,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 10,
+              "backgroundSizeMode": "100%"
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "9a0e5ea3-e3ab-543b-9b04-ead24d7444d1": {
+        "id": "9a0e5ea3-e3ab-543b-9b04-ead24d7444d1",
+        "alias": "Devices of site",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": true,
+          "stateEntityParamName": null,
+          "defaultStateEntity": {
+            "entityType": "ASSET",
+            "id": "add06a50-c733-11ed-a88f-f70eef39a418"
+          },
+          "rootEntity": null,
+          "direction": "FROM",
+          "maxLevel": 2,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": [
+                "DEVICE"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "filters": {
+      "8c8e58c1-dd34-2c71-a39a-fb574ebcaac1": {
+        "id": "8c8e58c1-dd34-2c71-a39a-fb574ebcaac1",
+        "filter": "Has computedValue field and is ap",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "TIME_SERIES",
+              "key": "computedValue"
+            },
+            "valueType": "NUMERIC",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "GREATER_OR_EQUAL",
+                  "value": {
+                    "defaultValue": 0
+                  },
+                  "type": "NUMERIC"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          },
+          {
+            "key": {
+              "type": "ENTITY_FIELD",
+              "key": "type"
+            },
+            "valueType": "STRING",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "STARTS_WITH",
+                  "value": {
+                    "defaultValue": "ap",
+                    "dynamicValue": null
+                  },
+                  "ignoreCase": false,
+                  "type": "STRING"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      },
+      "5a10238b-853b-a09e-d8db-9cf9db39968f": {
+        "id": "5a10238b-853b-a09e-d8db-9cf9db39968f",
+        "filter": "Has PoE",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "TIME_SERIES",
+              "key": "PoE"
+            },
+            "valueType": "NUMERIC",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "GREATER_OR_EQUAL",
+                  "value": {
+                    "defaultValue": 0
+                  },
+                  "type": "NUMERIC"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      }
+    },
+    "timewindow": {
+      "displayValue": "",
+      "hideInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "quickInterval": "CURRENT_DAY"
+      },
+      "history": {
+        "historyType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "fixedTimewindow": {
+          "startTimeMs": 1666518264819,
+          "endTimeMs": 1666604664819
+        },
+        "quickInterval": "CURRENT_DAY"
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": true,
+      "showEntitiesSelect": true,
+      "showDashboardTimewindow": true,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true
+    }
+  },
+  "externalId": null,
+  "name": "Large venue - APs - Energy - monthly"
+}

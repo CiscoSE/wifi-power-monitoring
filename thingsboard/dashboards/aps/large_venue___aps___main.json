@@ -1,0 +1,855 @@
+{
+  "title": "Large venue - APs - Main",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "Main dashboard for APs in Site",
+    "widgets": {
+      "17015a2d-0a65-d263-3d64-a3fdd08a88c1": {
+        "isSystemType": true,
+        "bundleAlias": "navigation_widgets",
+        "typeAlias": "navigation_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(255,255,255,0.87)",
+          "padding": "8px",
+          "settings": {
+            "name": "Energy detailed",
+            "icon": "insert_chart",
+            "path": "/dashboards/00eaeda0-c72f-11ed-a88f-f70eef39a418"
+          },
+          "title": "Energy detailed",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "widgetCss": "",
+          "noDataDisplayMessage": "",
+          "pageSize": 1024
+        },
+        "row": 0,
+        "col": 0,
+        "id": "17015a2d-0a65-d263-3d64-a3fdd08a88c1"
+      },
+      "4accce20-e347-fa94-de38-bfc65fc4d894": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "entities_hierarchy",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3.5,
+        "config": {
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1695741647247,
+                "endTimeMs": 1695828047247
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 200
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "4px",
+          "settings": {
+            "nodeRelationQueryFunction": "/**\n\n// Function should return relations query object for current node used to fetch entity children.\n// Function can return 'default' string value. In this case default relations query will be used.\n\n// The following example code will construct simple relations query that will fetch relations of type 'Contains'\n// from the current entity.\n\nvar entity = nodeCtx.entity;\nvar query = {\n    parameters: {\n        rootId: entity.id.id,\n        rootType: entity.id.entityType,\n        direction: \"FROM\",\n        maxLevel: 1\n    },\n    filters: [{\n        relationType: \"Contains\",\n        entityTypes: []\n    }]\n};\nreturn query;\n\n**/\n",
+            "nodeHasChildrenFunction": "/**\n\n// Function should return boolean value indicating whether current node has children (whether it can be expanded).\n\n// The following example code will restrict entities hierarchy expansion up to third level.\n\nreturn nodeCtx.level <= 2;\n\n// The next example code will restrict entities expansion according to the value of example 'nodeHasChildren' attribute.\n\nvar data = nodeCtx.data;\nif (data.hasOwnProperty('nodeHasChildren') && data['nodeHasChildren'] !== null) {\n    return data['nodeHasChildren'] === 'true';\n} else {\n    return true;\n}\n  \n**/\n ",
+            "nodeTextFunction": "/**\n\n// Function should return text (can be HTML code) for the current node.\n\n// The following example code will generate node text consisting of entity name and temperature if temperature value is present in entity attributes/timeseries.\n\nvar data =  nodeCtx.data;\nvar entity = nodeCtx.entity;\nvar text = entity.name;\nif (data.hasOwnProperty('temperature') && data['temperature'] !== null) {\n    text += \" <b>\"+ data['temperature'] +\" °C</b>\";\n}\nreturn text;\n\n**/",
+            "nodeIconFunction": "/** \n\n// Function should return node icon info object.\n// Resulting object should contain either 'materialIcon' or 'iconUrl' property. \n// Where:\n    - 'materialIcon' - name of the material icon to be used from the Material Icons Library (https://material.io/tools/icons);\n    - 'iconUrl' - url of the external image to be used as node icon.\n// Function can return 'default' string value. In this case default icons according to entity type will be used.\n\n// The following example code shows how to use external image for devices which name starts with 'Test' and use \n// default icons for the rest of entities.\n\nvar entity = nodeCtx.entity;\nif (entity.id.entityType === 'DEVICE' && entity.name.startsWith('Test')) {\n    return {iconUrl: 'https://avatars1.githubusercontent.com/u/14793288?v=4&s=117'};\n} else {\n    return 'default';\n}\n \n**/\nvar entity = nodeCtx.entity;\nvar data =  nodeCtx.data;\nif (data['Type'] === 'ap') {\n    return {materialIcon: 'wifi'};\n} else if (data['Type'] === 'switch'){\n    return {materialIcon: 'lan'};\n}\nelse {\n    return 'default';\n}\n",
+            "nodeDisabledFunction": "/**\n\n// Function should return boolean value indicating whether current node should be disabled (not selectable).\n\n// The following example code will disable current node according to the value of example 'nodeDisabled' attribute.\n\nvar data = nodeCtx.data;\nif (data.hasOwnProperty('nodeDisabled') && data['nodeDisabled'] !== null) {\n    return data['nodeDisabled'] === 'true';\n} else {\n    return false;\n}\n  \n**/\n",
+            "nodesSortFunction": "/**\n\n// This function is used to sort nodes of the same level. Function should compare two nodes and return \n// integer value: \n//     - less than 0 - sort nodeCtx1 to an index lower than nodeCtx2\n//     - 0 - leave nodeCtx1 and nodeCtx2 unchanged with respect to each other\n//     - greater than 0 - sort nodeCtx2 to an index lower than nodeCtx1\n\n// The following example code will sort entities first by entity type in alphabetical order then\n// by entity name in alphabetical order.\n\nvar result = nodeCtx1.entity.id.entityType.localeCompare(nodeCtx2.entity.id.entityType);\nif (result === 0) {\n    result = nodeCtx1.entity.name.localeCompare(nodeCtx2.entity.name);\n}\nreturn result;\n  \n**/",
+            "nodeOpenedFunction": "/**\n\n// Function should return boolean value indicating whether current node should be opened (expanded) when it first loaded.\n\n// The following example code will open by default nodes up to third level.\n\nreturn nodeCtx.level <= 2;\n\n**/\n "
+          },
+          "title": "Hierarchy",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400,
+            "padding": "5px 10px 5px 10px"
+          },
+          "useDashboardTimewindow": false,
+          "showLegend": false,
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "1e7dfad9-7fd9-d7b7-1a23-86e87817ff13",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "type",
+                  "type": "entityField",
+                  "label": "Type 2",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.8891305199843396
+                }
+              ]
+            }
+          ],
+          "widgetStyle": {},
+          "actions": {},
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "widgetCss": "",
+          "noDataDisplayMessage": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "4accce20-e347-fa94-de38-bfc65fc4d894"
+      },
+      "422923fe-e0d6-d315-1a19-30a870a71212": {
+        "isSystemType": false,
+        "bundleAlias": "test2",
+        "typeAlias": "test2",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "528d1d53-530e-5843-4b4a-66db1c17b2aa",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "PoE",
+                  "type": "timeseries",
+                  "label": "PoE",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.23175956435101996,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 30 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 30);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1695741647247,
+                "endTimeMs": 1695828047247
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {},
+          "title": "Total PoE",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "units": "W",
+          "decimals": 2,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "useDashboardTimewindow": true
+        },
+        "row": 0,
+        "col": 0,
+        "id": "422923fe-e0d6-d315-1a19-30a870a71212"
+      },
+      "bc7d3d0b-dccc-6b89-05e2-d59499f29e14": {
+        "isSystemType": true,
+        "bundleAlias": "navigation_widgets",
+        "typeAlias": "navigation_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(255,255,255,0.87)",
+          "padding": "8px",
+          "settings": {
+            "name": "Energy aggregated",
+            "icon": "insert_chart",
+            "path": "/dashboards/ec439af0-c72e-11ed-a88f-f70eef39a418"
+          },
+          "title": "Energy aggregated",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "widgetCss": "",
+          "noDataDisplayMessage": "",
+          "pageSize": 1024
+        },
+        "row": 0,
+        "col": 0,
+        "id": "bc7d3d0b-dccc-6b89-05e2-d59499f29e14"
+      },
+      "850af1b2-57f5-05ce-2534-34de7991ad28": {
+        "isSystemType": false,
+        "bundleAlias": "test2",
+        "typeAlias": "polar_area_chart_js",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7,
+        "sizeY": 5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "2e11963e-0449-b100-8f2b-2535e4573f6c",
+              "filterId": "aba20acb-1ee5-01cb-8923-f6f81731eaa7",
+              "dataKeys": [
+                {
+                  "name": "PoE",
+                  "type": "timeseries",
+                  "label": "PoE",
+                  "color": "#3f51b5",
+                  "settings": {},
+                  "_hash": 0.3769977098273597,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 30 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 30);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "44c2d751-4625-7b79-21b5-1bd410a60a20",
+              "filterId": "aba20acb-1ee5-01cb-8923-f6f81731eaa7",
+              "dataKeys": [
+                {
+                  "name": "PoE",
+                  "type": "timeseries",
+                  "label": "PoE 2",
+                  "color": "#dced2a",
+                  "settings": {},
+                  "_hash": 0.1456063232377347,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 30 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 30);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "b2ddbe3d-da42-eccb-9b10-5e7d33fca049",
+              "filterId": "aba20acb-1ee5-01cb-8923-f6f81731eaa7",
+              "dataKeys": [
+                {
+                  "name": "PoE",
+                  "type": "timeseries",
+                  "label": "PoE 3",
+                  "color": "#f44336",
+                  "settings": {},
+                  "_hash": 0.4003596064149243,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 30 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 30);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "353a6759-cf65-420b-41ac-a007a62cc151",
+              "filterId": "aba20acb-1ee5-01cb-8923-f6f81731eaa7",
+              "dataKeys": [
+                {
+                  "name": "PoE",
+                  "type": "timeseries",
+                  "label": "PoE 4",
+                  "color": "#ffc107",
+                  "settings": {},
+                  "_hash": 0.6731675828544502,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 30 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 30);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "2e11963e-0449-b100-8f2b-2535e4573f6c",
+              "filterId": "aba20acb-1ee5-01cb-8923-f6f81731eaa7",
+              "dataKeys": [
+                {
+                  "name": "PoE",
+                  "type": "timeseries",
+                  "label": "PoE 5",
+                  "color": "#607d8b",
+                  "settings": {},
+                  "_hash": 0.5736244313512573,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 30 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 30);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "44c2d751-4625-7b79-21b5-1bd410a60a20",
+              "filterId": "aba20acb-1ee5-01cb-8923-f6f81731eaa7",
+              "dataKeys": [
+                {
+                  "name": "PoE",
+                  "type": "timeseries",
+                  "label": "PoE 6",
+                  "color": "#9c27b0",
+                  "settings": {},
+                  "_hash": 0.8679065018483033,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 30 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 30);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "b2ddbe3d-da42-eccb-9b10-5e7d33fca049",
+              "filterId": "aba20acb-1ee5-01cb-8923-f6f81731eaa7",
+              "dataKeys": [
+                {
+                  "name": "PoE",
+                  "type": "timeseries",
+                  "label": "PoE 7",
+                  "color": "#8bc34a",
+                  "settings": {},
+                  "_hash": 0.06760983344563243,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 30 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 30);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "353a6759-cf65-420b-41ac-a007a62cc151",
+              "filterId": "aba20acb-1ee5-01cb-8923-f6f81731eaa7",
+              "dataKeys": [
+                {
+                  "name": "PoE",
+                  "type": "timeseries",
+                  "label": "PoE 8",
+                  "color": "#3f51b5",
+                  "settings": {},
+                  "_hash": 0.5736322734023891,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 30 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 30);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1695741647247,
+                "endTimeMs": 1695828047247
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "showTooltip": true
+          },
+          "title": "Total PoE per zone",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "units": "W",
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": true,
+            "showMax": false,
+            "showAvg": true,
+            "showTotal": false
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "850af1b2-57f5-05ce-2534-34de7991ad28"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Large venue - APs - Main",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "17015a2d-0a65-d263-3d64-a3fdd08a88c1": {
+                "sizeX": 3,
+                "sizeY": 3,
+                "row": 0,
+                "col": 0
+              },
+              "4accce20-e347-fa94-de38-bfc65fc4d894": {
+                "sizeX": 11,
+                "sizeY": 8,
+                "row": 3,
+                "col": 0
+              },
+              "422923fe-e0d6-d315-1a19-30a870a71212": {
+                "sizeX": 9,
+                "sizeY": 3,
+                "row": 12,
+                "col": 0
+              },
+              "bc7d3d0b-dccc-6b89-05e2-d59499f29e14": {
+                "sizeX": 3,
+                "sizeY": 3,
+                "row": 0,
+                "col": 8
+              },
+              "850af1b2-57f5-05ce-2534-34de7991ad28": {
+                "sizeX": 11,
+                "sizeY": 5,
+                "row": 15,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 10,
+              "backgroundSizeMode": "100%"
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "1e7dfad9-7fd9-d7b7-1a23-86e87817ff13": {
+        "id": "1e7dfad9-7fd9-d7b7-1a23-86e87817ff13",
+        "alias": "Zones",
+        "filter": {
+          "type": "assetType",
+          "resolveMultiple": true,
+          "assetType": "zone",
+          "assetNameFilter": ""
+        }
+      },
+      "2e11963e-0449-b100-8f2b-2535e4573f6c": {
+        "id": "2e11963e-0449-b100-8f2b-2535e4573f6c",
+        "alias": "Devices of zone-1",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "ade6d880-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "44c2d751-4625-7b79-21b5-1bd410a60a20": {
+        "id": "44c2d751-4625-7b79-21b5-1bd410a60a20",
+        "alias": "Devices of zone-2",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "ade997a0-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "b2ddbe3d-da42-eccb-9b10-5e7d33fca049": {
+        "id": "b2ddbe3d-da42-eccb-9b10-5e7d33fca049",
+        "alias": "Devices of zone-3",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "adedb650-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "353a6759-cf65-420b-41ac-a007a62cc151": {
+        "id": "353a6759-cf65-420b-41ac-a007a62cc151",
+        "alias": "Devices of zone-4",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "adf04e60-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "d37528ab-ab5a-d535-29b1-925d47340090": {
+        "id": "d37528ab-ab5a-d535-29b1-925d47340090",
+        "alias": "Devices of zone-5",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "ade6d880-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "c83583fd-e781-ea47-9a2f-e47fe275eb7d": {
+        "id": "c83583fd-e781-ea47-9a2f-e47fe275eb7d",
+        "alias": "Devices of zone-6",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "ade997a0-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "5cab27b7-428d-ae75-dfa1-d28868fba902": {
+        "id": "5cab27b7-428d-ae75-dfa1-d28868fba902",
+        "alias": "Devices of zone-7",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "adedb650-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "e0dabe05-3a00-c689-1ee1-99dd94b2f729": {
+        "id": "e0dabe05-3a00-c689-1ee1-99dd94b2f729",
+        "alias": "Devices of zone-8",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "adf04e60-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "528d1d53-530e-5843-4b4a-66db1c17b2aa": {
+        "id": "528d1d53-530e-5843-4b4a-66db1c17b2aa",
+        "alias": "Devices of site",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "add06a50-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 2,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      }
+    },
+    "filters": {
+      "aba20acb-1ee5-01cb-8923-f6f81731eaa7": {
+        "id": "aba20acb-1ee5-01cb-8923-f6f81731eaa7",
+        "filter": "Has PoE",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "TIME_SERIES",
+              "key": "PoE"
+            },
+            "valueType": "NUMERIC",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "GREATER_OR_EQUAL",
+                  "value": {
+                    "defaultValue": 0
+                  },
+                  "type": "NUMERIC"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      }
+    },
+    "timewindow": {
+      "hideInterval": false,
+      "hideLastInterval": false,
+      "hideQuickInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "timewindowMs": 7200000,
+        "quickInterval": "CURRENT_DAY",
+        "interval": 15000
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": true,
+      "showEntitiesSelect": true,
+      "showDashboardTimewindow": true,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true
+    }
+  },
+  "externalId": null,
+  "name": "Large venue - APs - Main"
+}

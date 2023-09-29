@@ -1,0 +1,27 @@
+version: "3.4"
+
+services:
+  thingsboard:
+    restart: always
+    image: "thingsboard/tb-postgres:3.4.4"
+    container_name: thingsboard
+    hostname: thingsboard
+    ports:
+      - "8080:9090"
+      - "1883:1883"
+      - "7070:7070"
+      - "5683-5688:5683-5688/udp"
+    environment:
+      TB_QUEUE_TYPE: in-memory
+    volumes:
+      - $HOME/thingsboard-db/tb-data:/data
+      - $HOME/thingsboard-db/tb-logs:/var/log/thingsboard
+
+    env_file:
+      - .env
+    networks:
+      - green
+
+networks:
+  green:
+    driver: bridge

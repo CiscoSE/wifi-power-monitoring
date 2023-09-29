@@ -1,0 +1,285 @@
+{
+  "title": "Large venue - APs - Energy - weekly",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "",
+    "widgets": {
+      "24f87827-2227-2b61-834c-aeccd640b65b": {
+        "isSystemType": false,
+        "bundleAlias": "test2",
+        "typeAlias": "timeseries_bar_chart_aggregation_per_week2",
+        "type": "timeseries",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 8,
+        "sizeY": 5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "b504d3e2-f8fe-eba6-a429-4eb551c7b8c4",
+              "filterId": "87f59766-acb6-36a8-648d-79e3248f99be",
+              "dataKeys": [
+                {
+                  "name": "PoE",
+                  "type": "timeseries",
+                  "label": "${entityName}",
+                  "color": "#f35221",
+                  "settings": {
+                    "excludeFromStacking": false,
+                    "hideDataByDefault": false,
+                    "disableDataHiding": false,
+                    "removeFromLegend": true,
+                    "showLines": false,
+                    "fillLines": false,
+                    "showPoints": false,
+                    "showPointShape": "circle",
+                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                    "showPointsLineWidth": 10,
+                    "showPointsRadius": 1,
+                    "showSeparateAxis": false,
+                    "axisPosition": "left",
+                    "thresholds": [
+                      {
+                        "thresholdValueSource": "predefinedValue"
+                      }
+                    ],
+                    "comparisonSettings": {
+                      "showValuesForComparison": true
+                    }
+                  },
+                  "_hash": 0.5450299131535562,
+                  "units": "kWh",
+                  "decimals": 2,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "// Take the average Wattage of an hour and convert it to kWh\nreturn (value/1000); // /1000 -> kW (J/s)",
+                  "aggregationType": null
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "hideInterval": false,
+            "hideAggregation": false,
+            "hideAggInterval": false,
+            "hideTimezone": false,
+            "selectedTab": 1,
+            "history": {
+              "historyType": 0,
+              "timewindowMs": 2592000000,
+              "interval": 7200000,
+              "fixedTimewindow": {
+                "startTimeMs": 1657092267117,
+                "endTimeMs": 1657178667117
+              },
+              "quickInterval": "CURRENT_YEAR"
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 50000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "shadowSize": 4,
+            "fontColor": "#545454",
+            "fontSize": 10,
+            "xaxis": {
+              "showLabels": true,
+              "color": "#545454"
+            },
+            "yaxis": {
+              "showLabels": true,
+              "color": "#545454",
+              "tickDecimals": 0
+            },
+            "grid": {
+              "color": "#545454",
+              "tickColor": "#DDDDDD",
+              "verticalLines": true,
+              "horizontalLines": true,
+              "outlineWidth": 1
+            },
+            "stack": true,
+            "tooltipIndividual": true,
+            "defaultBarWidth": 400000000,
+            "barAlignment": "center",
+            "tooltipCumulative": false,
+            "hideZeros": false,
+            "showTooltip": true,
+            "comparisonEnabled": false,
+            "timeForComparison": "previousInterval",
+            "xaxisSecond": {
+              "axisPosition": "top",
+              "showLabels": true
+            },
+            "customLegendEnabled": false
+          },
+          "title": "Total energy - agg per week",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "widgetStyle": {},
+          "useDashboardTimewindow": false,
+          "showLegend": true,
+          "actions": {},
+          "displayTimewindow": true,
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "widgetCss": "",
+          "noDataDisplayMessage": "",
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": false,
+            "showMax": false,
+            "showAvg": true,
+            "showTotal": false
+          },
+          "pageSize": 1024,
+          "units": "kWh",
+          "decimals": 2
+        },
+        "row": 0,
+        "col": 0,
+        "id": "24f87827-2227-2b61-834c-aeccd640b65b"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Large venue - APs - Energy - weekly",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "24f87827-2227-2b61-834c-aeccd640b65b": {
+                "sizeX": 12,
+                "sizeY": 9,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 10,
+              "backgroundSizeMode": "100%"
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "b504d3e2-f8fe-eba6-a429-4eb551c7b8c4": {
+        "id": "b504d3e2-f8fe-eba6-a429-4eb551c7b8c4",
+        "alias": "Devices of site",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": true,
+          "stateEntityParamName": null,
+          "defaultStateEntity": {
+            "entityType": "ASSET",
+            "id": "add06a50-c733-11ed-a88f-f70eef39a418"
+          },
+          "rootEntity": null,
+          "direction": "FROM",
+          "maxLevel": 2,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": [
+                "DEVICE"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "filters": {
+      "87f59766-acb6-36a8-648d-79e3248f99be": {
+        "id": "87f59766-acb6-36a8-648d-79e3248f99be",
+        "filter": "Has PoE",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "TIME_SERIES",
+              "key": "PoE"
+            },
+            "valueType": "NUMERIC",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "GREATER_OR_EQUAL",
+                  "value": {
+                    "defaultValue": 0
+                  },
+                  "type": "NUMERIC"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      }
+    },
+    "timewindow": {
+      "displayValue": "",
+      "hideInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "quickInterval": "CURRENT_DAY"
+      },
+      "history": {
+        "historyType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "fixedTimewindow": {
+          "startTimeMs": 1666518601755,
+          "endTimeMs": 1666605001755
+        },
+        "quickInterval": "CURRENT_DAY"
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": true,
+      "showEntitiesSelect": true,
+      "showDashboardTimewindow": true,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true
+    }
+  },
+  "externalId": null,
+  "name": "Large venue - APs - Energy - weekly"
+}

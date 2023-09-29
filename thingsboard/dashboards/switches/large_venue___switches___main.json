@@ -1,0 +1,2091 @@
+{
+  "title": "Large venue - Switches - Main",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "",
+    "widgets": {
+      "8581ee37-240c-05cb-6232-7ceca63550dc": {
+        "isSystemType": true,
+        "bundleAlias": "charts",
+        "typeAlias": "basic_timeseries",
+        "type": "timeseries",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 8,
+        "sizeY": 5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "db04f5f8-e12e-1676-1bed-535a9cde29d4",
+              "filterId": "50d7c776-1602-632e-faf8-c7db5aaacea8",
+              "dataKeys": [
+                {
+                  "name": "total_interfaces_power",
+                  "type": "timeseries",
+                  "label": "total_interfaces_power ${entityName}",
+                  "color": "#f44336",
+                  "settings": {
+                    "excludeFromStacking": false,
+                    "hideDataByDefault": false,
+                    "disableDataHiding": false,
+                    "removeFromLegend": false,
+                    "showLines": true,
+                    "fillLines": false,
+                    "showPoints": true,
+                    "showPointShape": "circle",
+                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                    "showPointsLineWidth": 5,
+                    "showPointsRadius": 1,
+                    "showSeparateAxis": false,
+                    "axisPosition": "left",
+                    "thresholds": [
+                      {
+                        "thresholdValueSource": "predefinedValue"
+                      }
+                    ],
+                    "comparisonSettings": {
+                      "showValuesForComparison": true
+                    }
+                  },
+                  "_hash": 0.4971532701178528,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "db04f5f8-e12e-1676-1bed-535a9cde29d4",
+              "filterId": "9fa36a11-dfe8-0507-fd66-b852c4861bbf",
+              "dataKeys": [
+                {
+                  "name": "GigabitEthernet1/0/13_power",
+                  "type": "timeseries",
+                  "label": "GigabitEthernet1/0/13_power - ${entityName}",
+                  "color": "#ffc107",
+                  "settings": {
+                    "excludeFromStacking": false,
+                    "hideDataByDefault": false,
+                    "disableDataHiding": false,
+                    "removeFromLegend": false,
+                    "showLines": true,
+                    "fillLines": false,
+                    "showPoints": true,
+                    "showPointShape": "circle",
+                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                    "showPointsLineWidth": 5,
+                    "showPointsRadius": 1,
+                    "showSeparateAxis": false,
+                    "axisPosition": "left",
+                    "thresholds": [
+                      {
+                        "thresholdValueSource": "predefinedValue"
+                      }
+                    ],
+                    "comparisonSettings": {
+                      "showValuesForComparison": true
+                    }
+                  },
+                  "_hash": 0.345586223113558,
+                  "units": "W",
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "db04f5f8-e12e-1676-1bed-535a9cde29d4",
+              "filterId": "5d59eaf0-9181-a053-fe36-4cd862bd809e",
+              "dataKeys": [
+                {
+                  "name": "GigabitEthernet1/0/14_power",
+                  "type": "timeseries",
+                  "label": "GigabitEthernet1/0/14_power - ${entityName}",
+                  "color": "#07c4ff",
+                  "settings": {
+                    "excludeFromStacking": false,
+                    "hideDataByDefault": false,
+                    "disableDataHiding": false,
+                    "removeFromLegend": false,
+                    "showLines": true,
+                    "fillLines": false,
+                    "showPoints": true,
+                    "showPointShape": "circle",
+                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                    "showPointsLineWidth": 5,
+                    "showPointsRadius": 1,
+                    "showSeparateAxis": false,
+                    "axisPosition": "left",
+                    "thresholds": [
+                      {
+                        "thresholdValueSource": "predefinedValue"
+                      }
+                    ],
+                    "comparisonSettings": {
+                      "showValuesForComparison": true
+                    }
+                  },
+                  "_hash": 0.9596267189420205,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "hideInterval": false,
+            "hideAggregation": false,
+            "hideAggInterval": false,
+            "hideTimezone": false,
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 0,
+              "timewindowMs": 604800000,
+              "quickInterval": "CURRENT_DAY",
+              "interval": 1800000
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "shadowSize": 4,
+            "fontColor": "#545454",
+            "fontSize": 10,
+            "xaxis": {
+              "showLabels": true,
+              "color": "#545454"
+            },
+            "yaxis": {
+              "showLabels": true,
+              "color": "#545454",
+              "tickDecimals": 0
+            },
+            "grid": {
+              "color": "#545454",
+              "tickColor": "#DDDDDD",
+              "verticalLines": true,
+              "horizontalLines": true,
+              "outlineWidth": 1
+            },
+            "stack": false,
+            "tooltipIndividual": true,
+            "smoothLines": false,
+            "tooltipCumulative": false,
+            "hideZeros": false,
+            "showTooltip": true,
+            "comparisonEnabled": false,
+            "timeForComparison": "previousInterval",
+            "xaxisSecond": {
+              "axisPosition": "top",
+              "showLabels": true
+            },
+            "customLegendEnabled": false
+          },
+          "title": "Interfaces 13,  14 and total interfaces power - site",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "widgetCss": "",
+          "noDataDisplayMessage": "",
+          "showLegend": true,
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": false,
+            "showMax": false,
+            "showAvg": true,
+            "showTotal": false
+          },
+          "units": "W",
+          "decimals": 2,
+          "displayTimewindow": true
+        },
+        "row": 0,
+        "col": 0,
+        "id": "8581ee37-240c-05cb-6232-7ceca63550dc"
+      },
+      "33da0ec0-1848-ae41-805e-c4e4aa9b1887": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "entities_hierarchy",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3.5,
+        "config": {
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1695741519406,
+                "endTimeMs": 1695827919406
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 200
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "4px",
+          "settings": {
+            "nodeRelationQueryFunction": "/**\n\n// Function should return relations query object for current node used to fetch entity children.\n// Function can return 'default' string value. In this case default relations query will be used.\n\n// The following example code will construct simple relations query that will fetch relations of type 'Contains'\n// from the current entity.\n\nvar entity = nodeCtx.entity;\nvar query = {\n    parameters: {\n        rootId: entity.id.id,\n        rootType: entity.id.entityType,\n        direction: \"FROM\",\n        maxLevel: 1\n    },\n    filters: [{\n        relationType: \"Contains\",\n        entityTypes: []\n    }]\n};\nreturn query;\n\n**/\n",
+            "nodeHasChildrenFunction": "/**\n\n// Function should return boolean value indicating whether current node has children (whether it can be expanded).\n\n// The following example code will restrict entities hierarchy expansion up to third level.\n\nreturn nodeCtx.level <= 2;\n\n// The next example code will restrict entities expansion according to the value of example 'nodeHasChildren' attribute.\n\nvar data = nodeCtx.data;\nif (data.hasOwnProperty('nodeHasChildren') && data['nodeHasChildren'] !== null) {\n    return data['nodeHasChildren'] === 'true';\n} else {\n    return true;\n}\n  \n**/\n ",
+            "nodeTextFunction": "/**\n\n// Function should return text (can be HTML code) for the current node.\n\n// The following example code will generate node text consisting of entity name and temperature if temperature value is present in entity attributes/timeseries.\n\nvar data =  nodeCtx.data;\nvar entity = nodeCtx.entity;\nvar text = entity.name;\nif (data.hasOwnProperty('temperature') && data['temperature'] !== null) {\n    text += \" <b>\"+ data['temperature'] +\" °C</b>\";\n}\nreturn text;\n\n**/",
+            "nodeIconFunction": "/** \n\n// Function should return node icon info object.\n// Resulting object should contain either 'materialIcon' or 'iconUrl' property. \n// Where:\n    - 'materialIcon' - name of the material icon to be used from the Material Icons Library (https://material.io/tools/icons);\n    - 'iconUrl' - url of the external image to be used as node icon.\n// Function can return 'default' string value. In this case default icons according to entity type will be used.\n\n// The following example code shows how to use external image for devices which name starts with 'Test' and use \n// default icons for the rest of entities.\n\nvar entity = nodeCtx.entity;\nif (entity.id.entityType === 'DEVICE' && entity.name.startsWith('Test')) {\n    return {iconUrl: 'https://avatars1.githubusercontent.com/u/14793288?v=4&s=117'};\n} else {\n    return 'default';\n}\n \n**/\nvar entity = nodeCtx.entity;\nvar data =  nodeCtx.data;\nif (data['Type'] === 'ap') {\n    return {materialIcon: 'wifi'};\n} else if (data['Type'] === 'switch'){\n    return {materialIcon: 'lan'};\n}\nelse {\n    return 'default';\n}\n",
+            "nodeDisabledFunction": "/**\n\n// Function should return boolean value indicating whether current node should be disabled (not selectable).\n\n// The following example code will disable current node according to the value of example 'nodeDisabled' attribute.\n\nvar data = nodeCtx.data;\nif (data.hasOwnProperty('nodeDisabled') && data['nodeDisabled'] !== null) {\n    return data['nodeDisabled'] === 'true';\n} else {\n    return false;\n}\n  \n**/\n",
+            "nodesSortFunction": "/**\n\n// This function is used to sort nodes of the same level. Function should compare two nodes and return \n// integer value: \n//     - less than 0 - sort nodeCtx1 to an index lower than nodeCtx2\n//     - 0 - leave nodeCtx1 and nodeCtx2 unchanged with respect to each other\n//     - greater than 0 - sort nodeCtx2 to an index lower than nodeCtx1\n\n// The following example code will sort entities first by entity type in alphabetical order then\n// by entity name in alphabetical order.\n\nvar result = nodeCtx1.entity.id.entityType.localeCompare(nodeCtx2.entity.id.entityType);\nif (result === 0) {\n    result = nodeCtx1.entity.name.localeCompare(nodeCtx2.entity.name);\n}\nreturn result;\n  \n**/",
+            "nodeOpenedFunction": "/**\n\n// Function should return boolean value indicating whether current node should be opened (expanded) when it first loaded.\n\n// The following example code will open by default nodes up to third level.\n\nreturn nodeCtx.level <= 2;\n\n**/\n "
+          },
+          "title": "Hierarchy",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400,
+            "padding": "5px 10px 5px 10px"
+          },
+          "useDashboardTimewindow": false,
+          "showLegend": false,
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "f1aba846-a0ce-c59d-7190-ac28990844d5",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "type",
+                  "type": "entityField",
+                  "label": "Type",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.5499067960102312
+                }
+              ]
+            }
+          ],
+          "widgetStyle": {},
+          "actions": {},
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "widgetCss": "",
+          "noDataDisplayMessage": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "33da0ec0-1848-ae41-805e-c4e4aa9b1887"
+      },
+      "43aa0062-7dbd-0192-b556-56a7eac1edba": {
+        "isSystemType": true,
+        "bundleAlias": "charts",
+        "typeAlias": "polar_area_chart_js",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7,
+        "sizeY": 5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "db04f5f8-e12e-1676-1bed-535a9cde29d4",
+              "filterId": "a28f611b-0669-d817-d7f5-c11ccb0b2118",
+              "dataKeys": [
+                {
+                  "name": "total_interfaces_power",
+                  "type": "timeseries",
+                  "label": "${entityName}",
+                  "color": "#161863",
+                  "settings": {},
+                  "_hash": 0.7813017159781873,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 20 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 20);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1695741519406,
+                "endTimeMs": 1695827919406
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "showTooltip": true
+          },
+          "title": "Total interfaces power distribution per device -  Site ",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "units": "W",
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": true,
+            "showMin": false,
+            "showMax": false,
+            "showAvg": false,
+            "showTotal": false
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "43aa0062-7dbd-0192-b556-56a7eac1edba"
+      },
+      "65437056-fac4-3cc0-1c88-3fed917dfe47": {
+        "isSystemType": false,
+        "bundleAlias": "test2",
+        "typeAlias": "test2",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "db04f5f8-e12e-1676-1bed-535a9cde29d4",
+              "filterId": "a28f611b-0669-d817-d7f5-c11ccb0b2118",
+              "dataKeys": [
+                {
+                  "name": "total_interfaces_power",
+                  "type": "timeseries",
+                  "label": "total_interfaces_power",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.40109421939154544,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3 h before the current time\nbeginning_date.setHours(beginning_date.getHours() - 3);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1695741519406,
+                "endTimeMs": 1695827919406
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {},
+          "title": "Total interfaces power -  site (average 5m)",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "units": "W"
+        },
+        "row": 0,
+        "col": 0,
+        "id": "65437056-fac4-3cc0-1c88-3fed917dfe47"
+      },
+      "d5c76ef6-381f-3e5d-2584-e95f74a037c4": {
+        "isSystemType": false,
+        "bundleAlias": "test2",
+        "typeAlias": "polar_area_chart_js",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7,
+        "sizeY": 5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "58918a52-16cc-97e0-eed1-7583fc7271be",
+              "filterId": "a28f611b-0669-d817-d7f5-c11ccb0b2118",
+              "dataKeys": [
+                {
+                  "name": "total_interfaces_power",
+                  "type": "timeseries",
+                  "label": "total_interfaces_power",
+                  "color": "#3f51b5",
+                  "settings": {},
+                  "_hash": 0.3769977098273597,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 20 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 20);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "edaa1829-9038-0564-e29b-53f087d27f58",
+              "filterId": "a28f611b-0669-d817-d7f5-c11ccb0b2118",
+              "dataKeys": [
+                {
+                  "name": "total_interfaces_power",
+                  "type": "timeseries",
+                  "label": "total_interfaces_power 2",
+                  "color": "#dced2a",
+                  "settings": {},
+                  "_hash": 0.1456063232377347,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 20 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 20);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "4c281672-5bef-93bf-d96d-0f9285acde41",
+              "filterId": "a28f611b-0669-d817-d7f5-c11ccb0b2118",
+              "dataKeys": [
+                {
+                  "name": "total_interfaces_power",
+                  "type": "timeseries",
+                  "label": "total_interfaces_power 3",
+                  "color": "#f44336",
+                  "settings": {},
+                  "_hash": 0.4003596064149243,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 20 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 20);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "b767358b-fb46-4340-e6f6-6801c42941d6",
+              "filterId": "a28f611b-0669-d817-d7f5-c11ccb0b2118",
+              "dataKeys": [
+                {
+                  "name": "total_interfaces_power",
+                  "type": "timeseries",
+                  "label": "total_interfaces_power 4",
+                  "color": "#ffc107",
+                  "settings": {},
+                  "_hash": 0.6731675828544502,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 20 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 20);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "414aad54-542e-2f43-bc2c-e68eda646e3a",
+              "filterId": "a28f611b-0669-d817-d7f5-c11ccb0b2118",
+              "dataKeys": [
+                {
+                  "name": "total_interfaces_power",
+                  "type": "timeseries",
+                  "label": "total_interfaces_power 5",
+                  "color": "#607d8b",
+                  "settings": {},
+                  "_hash": 0.5736244313512573,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 20 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 20);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "ee1eb37d-d01e-d151-2d47-106a6b7fe835",
+              "filterId": "a28f611b-0669-d817-d7f5-c11ccb0b2118",
+              "dataKeys": [
+                {
+                  "name": "total_interfaces_power",
+                  "type": "timeseries",
+                  "label": "total_interfaces_power 6",
+                  "color": "#9c27b0",
+                  "settings": {},
+                  "_hash": 0.8679065018483033,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 20 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 20);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "4294a360-79f1-0513-9415-a707e34eb2fc",
+              "filterId": "a28f611b-0669-d817-d7f5-c11ccb0b2118",
+              "dataKeys": [
+                {
+                  "name": "total_interfaces_power",
+                  "type": "timeseries",
+                  "label": "total_interfaces_power 7",
+                  "color": "#8bc34a",
+                  "settings": {},
+                  "_hash": 0.06760983344563243,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 20 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 20);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "c2cd2a26-87e1-9ec2-a22e-c51af206999e",
+              "filterId": "a28f611b-0669-d817-d7f5-c11ccb0b2118",
+              "dataKeys": [
+                {
+                  "name": "total_interfaces_power",
+                  "type": "timeseries",
+                  "label": "total_interfaces_power 8",
+                  "color": "#3f51b5",
+                  "settings": {},
+                  "_hash": 0.9074549967269657,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "var current_date = new Date();\nvar beginning_date = current_date;\nvar current_timestamp = +current_date;\n\n// 3h before the current time\n//beginning_date.setHours(beginning_date.getHours() - 3);\n// 20 m before current time\nbeginning_date.setMinutes(beginning_date.getMinutes() - 20);\n\nif (time >= +beginning_date && time <= current_timestamp) {\n    return value;\n} else {\n    return null;\n}"
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1695741519406,
+                "endTimeMs": 1695827919406
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "showTooltip": true
+          },
+          "title": "Total interfaces power per zone",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "units": "W",
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": true,
+            "showMax": false,
+            "showAvg": true,
+            "showTotal": false
+          },
+          "useDashboardTimewindow": true
+        },
+        "row": 0,
+        "col": 0,
+        "id": "d5c76ef6-381f-3e5d-2584-e95f74a037c4"
+      },
+      "b6f55b88-b4c4-c48b-c28f-16619055123a": {
+        "isSystemType": false,
+        "bundleAlias": "test2",
+        "typeAlias": "timeseries_aggregation_per_day_sum_over_series",
+        "type": "timeseries",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 8,
+        "sizeY": 5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "db04f5f8-e12e-1676-1bed-535a9cde29d4",
+              "filterId": "50d7c776-1602-632e-faf8-c7db5aaacea8",
+              "dataKeys": [
+                {
+                  "name": "total_interfaces_power",
+                  "type": "timeseries",
+                  "label": "total_interfaces_power",
+                  "color": "#f3f321",
+                  "settings": {
+                    "excludeFromStacking": false,
+                    "hideDataByDefault": false,
+                    "disableDataHiding": false,
+                    "removeFromLegend": true,
+                    "showLines": false,
+                    "fillLines": false,
+                    "showPoints": false,
+                    "showPointShape": "circle",
+                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                    "showPointsLineWidth": 10,
+                    "showPointsRadius": 1,
+                    "showSeparateAxis": false,
+                    "axisPosition": "left",
+                    "thresholds": [
+                      {
+                        "thresholdValueSource": "predefinedValue"
+                      }
+                    ],
+                    "comparisonSettings": {
+                      "showValuesForComparison": true
+                    }
+                  },
+                  "_hash": 0.5390720599838928,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "// Take the average Wattage of an hour and convert it to kWh\nreturn (value/1000); // /1000 -> kW (J/s)"
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "hideInterval": false,
+            "hideAggregation": false,
+            "hideAggInterval": false,
+            "hideTimezone": false,
+            "selectedTab": 1,
+            "history": {
+              "historyType": 0,
+              "timewindowMs": 604800000,
+              "interval": 3600000,
+              "fixedTimewindow": {
+                "startTimeMs": 1657207798886,
+                "endTimeMs": 1657294198886
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 50000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "shadowSize": 4,
+            "fontColor": "#545454",
+            "fontSize": 10,
+            "xaxis": {
+              "showLabels": true,
+              "color": "#545454"
+            },
+            "yaxis": {
+              "showLabels": true,
+              "color": "#545454",
+              "tickDecimals": 0
+            },
+            "grid": {
+              "color": "#545454",
+              "tickColor": "#DDDDDD",
+              "verticalLines": true,
+              "horizontalLines": true,
+              "outlineWidth": 1
+            },
+            "stack": false,
+            "tooltipIndividual": true,
+            "defaultBarWidth": 4000000,
+            "barAlignment": "center",
+            "tooltipCumulative": false,
+            "hideZeros": false,
+            "showTooltip": true,
+            "comparisonEnabled": false,
+            "timeForComparison": "previousInterval",
+            "xaxisSecond": {
+              "axisPosition": "top",
+              "showLabels": true
+            },
+            "customLegendEnabled": false
+          },
+          "title": "Total energy - aggregation per day [Last 7 days] - site",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": false,
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "widgetCss": "",
+          "units": "kWh",
+          "noDataDisplayMessage": "",
+          "showLegend": true,
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": false,
+            "showMax": false,
+            "showAvg": true,
+            "showTotal": false
+          },
+          "displayTimewindow": true
+        },
+        "row": 0,
+        "col": 0,
+        "id": "b6f55b88-b4c4-c48b-c28f-16619055123a"
+      },
+      "8561706b-1d5d-dbc5-1c96-d47c3e79c1be": {
+        "isSystemType": true,
+        "bundleAlias": "digital_gauges",
+        "typeAlias": "mini_gauge_justgage",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2,
+        "sizeY": 2,
+        "config": {
+          "datasources": [
+            {
+              "type": "entityCount",
+              "name": "Active devices",
+              "entityAliasId": "db04f5f8-e12e-1676-1bed-535a9cde29d4",
+              "filterId": "67ccbc50-cbcb-ebcd-61b2-9d3966978052",
+              "dataKeys": [
+                {
+                  "name": "count",
+                  "type": "count",
+                  "label": "count",
+                  "color": "#18a71a",
+                  "settings": {},
+                  "_hash": 0.708642647569333
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1695741519406,
+                "endTimeMs": 1695827919406
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "maxValue": 100,
+            "minValue": 0,
+            "donutStartAngle": 90,
+            "showValue": true,
+            "showMinMax": true,
+            "gaugeWidthScale": 0.75,
+            "levelColors": [],
+            "titleFont": {
+              "family": "Roboto",
+              "size": 12,
+              "style": "normal",
+              "weight": "500"
+            },
+            "labelFont": {
+              "family": "Roboto",
+              "size": 8,
+              "style": "normal",
+              "weight": "500"
+            },
+            "valueFont": {
+              "family": "Roboto",
+              "style": "normal",
+              "weight": "500",
+              "size": 32
+            },
+            "minMaxFont": {
+              "family": "Segment7Standard",
+              "size": 12,
+              "style": "normal",
+              "weight": "500"
+            },
+            "neonGlowBrightness": 0,
+            "dashThickness": 0,
+            "roundedLineCap": true,
+            "gaugeType": "donut",
+            "showTitle": false,
+            "showUnitTitle": false,
+            "showTimestamp": false,
+            "timestampFormat": "yyyy-MM-dd HH:mm:ss",
+            "useFixedLevelColor": false,
+            "showTicks": false,
+            "animation": true,
+            "animationDuration": 500,
+            "animationRule": "linear"
+          },
+          "title": "Active devices",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "widgetStyle": {},
+          "widgetCss": "",
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "showTitleIcon": false,
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "8561706b-1d5d-dbc5-1c96-d47c3e79c1be"
+      },
+      "3bc42e33-1ee3-087e-6161-f8985e69b498": {
+        "isSystemType": true,
+        "bundleAlias": "digital_gauges",
+        "typeAlias": "mini_gauge_justgage",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2,
+        "sizeY": 2,
+        "config": {
+          "datasources": [
+            {
+              "type": "entityCount",
+              "name": null,
+              "entityAliasId": "db04f5f8-e12e-1676-1bed-535a9cde29d4",
+              "filterId": "f514ad95-10fe-36e6-d6da-0a4e42142870",
+              "dataKeys": [
+                {
+                  "name": "count",
+                  "type": "count",
+                  "label": "count",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.5609833609458085
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1695741519406,
+                "endTimeMs": 1695827919406
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "maxValue": 100,
+            "minValue": 0,
+            "donutStartAngle": 90,
+            "showValue": true,
+            "showMinMax": true,
+            "gaugeWidthScale": 0.75,
+            "levelColors": [],
+            "titleFont": {
+              "family": "Roboto",
+              "size": 12,
+              "style": "normal",
+              "weight": "500"
+            },
+            "labelFont": {
+              "family": "Roboto",
+              "size": 8,
+              "style": "normal",
+              "weight": "500"
+            },
+            "valueFont": {
+              "family": "Roboto",
+              "style": "normal",
+              "weight": "500",
+              "size": 32
+            },
+            "minMaxFont": {
+              "family": "Segment7Standard",
+              "size": 12,
+              "style": "normal",
+              "weight": "500"
+            },
+            "neonGlowBrightness": 0,
+            "dashThickness": 0,
+            "roundedLineCap": true,
+            "gaugeType": "donut",
+            "showTitle": false,
+            "showUnitTitle": false,
+            "showTimestamp": false,
+            "timestampFormat": "yyyy-MM-dd HH:mm:ss",
+            "useFixedLevelColor": false,
+            "showTicks": false,
+            "animation": true,
+            "animationDuration": 500,
+            "animationRule": "linear"
+          },
+          "title": "Total devices",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "widgetStyle": {},
+          "widgetCss": "",
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "showTitleIcon": false,
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "3bc42e33-1ee3-087e-6161-f8985e69b498"
+      },
+      "4e7fd360-0819-30ed-d352-7a68ace4ec24": {
+        "isSystemType": true,
+        "bundleAlias": "digital_gauges",
+        "typeAlias": "mini_gauge_justgage",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2,
+        "sizeY": 2,
+        "config": {
+          "datasources": [
+            {
+              "type": "entityCount",
+              "name": "Non-active devices",
+              "entityAliasId": "db04f5f8-e12e-1676-1bed-535a9cde29d4",
+              "filterId": "6493a2cf-4df5-047d-2761-9187b26585ac",
+              "dataKeys": [
+                {
+                  "name": "count",
+                  "type": "count",
+                  "label": "count",
+                  "color": "#f32121",
+                  "settings": {},
+                  "_hash": 0.16520952584054738
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1695741519406,
+                "endTimeMs": 1695827919406
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "maxValue": 100,
+            "minValue": 0,
+            "donutStartAngle": 90,
+            "showValue": true,
+            "showMinMax": true,
+            "gaugeWidthScale": 0.75,
+            "levelColors": [],
+            "titleFont": {
+              "family": "Roboto",
+              "size": 12,
+              "style": "normal",
+              "weight": "500"
+            },
+            "labelFont": {
+              "family": "Roboto",
+              "size": 8,
+              "style": "normal",
+              "weight": "500"
+            },
+            "valueFont": {
+              "family": "Roboto",
+              "style": "normal",
+              "weight": "500",
+              "size": 32
+            },
+            "minMaxFont": {
+              "family": "Segment7Standard",
+              "size": 12,
+              "style": "normal",
+              "weight": "500"
+            },
+            "neonGlowBrightness": 0,
+            "dashThickness": 0,
+            "roundedLineCap": true,
+            "gaugeType": "donut",
+            "showTitle": false,
+            "showUnitTitle": false,
+            "showTimestamp": false,
+            "timestampFormat": "yyyy-MM-dd HH:mm:ss",
+            "useFixedLevelColor": false,
+            "showTicks": false,
+            "animation": true,
+            "animationDuration": 500,
+            "animationRule": "linear"
+          },
+          "title": "Non-active devices",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "widgetStyle": {},
+          "widgetCss": "",
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "showTitleIcon": false,
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "4e7fd360-0819-30ed-d352-7a68ace4ec24"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Large venue - Switches - Main",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "8581ee37-240c-05cb-6232-7ceca63550dc": {
+                "sizeX": 18,
+                "sizeY": 13,
+                "row": 22,
+                "col": 8
+              },
+              "33da0ec0-1848-ae41-805e-c4e4aa9b1887": {
+                "sizeX": 10,
+                "sizeY": 22,
+                "row": 0,
+                "col": 0
+              },
+              "43aa0062-7dbd-0192-b556-56a7eac1edba": {
+                "sizeX": 13,
+                "sizeY": 12,
+                "row": 35,
+                "col": 0
+              },
+              "65437056-fac4-3cc0-1c88-3fed917dfe47": {
+                "sizeX": 8,
+                "sizeY": 6,
+                "row": 22,
+                "col": 0
+              },
+              "d5c76ef6-381f-3e5d-2584-e95f74a037c4": {
+                "sizeX": 13,
+                "sizeY": 12,
+                "row": 35,
+                "col": 13
+              },
+              "b6f55b88-b4c4-c48b-c28f-16619055123a": {
+                "sizeX": 26,
+                "sizeY": 6,
+                "row": 47,
+                "col": 0
+              },
+              "8561706b-1d5d-dbc5-1c96-d47c3e79c1be": {
+                "sizeX": 5,
+                "sizeY": 4,
+                "row": 18,
+                "col": 16
+              },
+              "3bc42e33-1ee3-087e-6161-f8985e69b498": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "row": 18,
+                "col": 10
+              },
+              "4e7fd360-0819-30ed-d352-7a68ace4ec24": {
+                "sizeX": 5,
+                "sizeY": 4,
+                "row": 18,
+                "col": 21
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 10,
+              "backgroundSizeMode": "100%"
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "58918a52-16cc-97e0-eed1-7583fc7271be": {
+        "id": "58918a52-16cc-97e0-eed1-7583fc7271be",
+        "alias": "Devices of zone-A",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "adf33490-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "db04f5f8-e12e-1676-1bed-535a9cde29d4": {
+        "id": "db04f5f8-e12e-1676-1bed-535a9cde29d4",
+        "alias": "Devices of site",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": true,
+          "stateEntityParamName": null,
+          "defaultStateEntity": {
+            "entityType": "ASSET",
+            "id": "add06a50-c733-11ed-a88f-f70eef39a418"
+          },
+          "rootEntity": null,
+          "direction": "FROM",
+          "maxLevel": 2,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "edaa1829-9038-0564-e29b-53f087d27f58": {
+        "id": "edaa1829-9038-0564-e29b-53f087d27f58",
+        "alias": "Devices of zone-B",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "adf53060-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "4c281672-5bef-93bf-d96d-0f9285acde41": {
+        "id": "4c281672-5bef-93bf-d96d-0f9285acde41",
+        "alias": "Devices of zone-C",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "adf77a50-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "b767358b-fb46-4340-e6f6-6801c42941d6": {
+        "id": "b767358b-fb46-4340-e6f6-6801c42941d6",
+        "alias": "Devices of zone-D",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "adf9c440-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "414aad54-542e-2f43-bc2c-e68eda646e3a": {
+        "id": "414aad54-542e-2f43-bc2c-e68eda646e3a",
+        "alias": "Devices of zone-E",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "adf33490-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "ee1eb37d-d01e-d151-2d47-106a6b7fe835": {
+        "id": "ee1eb37d-d01e-d151-2d47-106a6b7fe835",
+        "alias": "Devices of zone-F",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "adf53060-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": [
+            {
+              "relationType": "Contains",
+              "entityTypes": ["DEVICE"]
+            }
+          ]
+        }
+      },
+      "4294a360-79f1-0513-9415-a707e34eb2fc": {
+        "id": "4294a360-79f1-0513-9415-a707e34eb2fc",
+        "alias": "Devices of zone-G",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "adf77a50-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": []
+        }
+      },
+      "c2cd2a26-87e1-9ec2-a22e-c51af206999e": {
+        "id": "c2cd2a26-87e1-9ec2-a22e-c51af206999e",
+        "alias": "Devices of zone-H",
+        "filter": {
+          "type": "relationsQuery",
+          "resolveMultiple": true,
+          "rootStateEntity": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null,
+          "rootEntity": {
+            "entityType": "ASSET",
+            "id": "adf9c440-c733-11ed-a88f-f70eef39a418"
+          },
+          "direction": "FROM",
+          "maxLevel": 1,
+          "fetchLastLevelOnly": false,
+          "filters": []
+        }
+      },
+      "f1aba846-a0ce-c59d-7190-ac28990844d5": {
+        "id": "f1aba846-a0ce-c59d-7190-ac28990844d5",
+        "alias": "Zones",
+        "filter": {
+          "type": "assetType",
+          "resolveMultiple": true,
+          "assetType": "zone",
+          "assetNameFilter": ""
+        }
+      }
+    },
+    "filters": {
+      "92efc5fe-dcc3-05be-cc92-161563db65c2": {
+        "id": "92efc5fe-dcc3-05be-cc92-161563db65c2",
+        "filter": "Is type default",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "ENTITY_FIELD",
+              "key": "type"
+            },
+            "valueType": "STRING",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "EQUAL",
+                  "value": {
+                    "defaultValue": "default",
+                    "dynamicValue": null
+                  },
+                  "ignoreCase": false,
+                  "type": "STRING"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          },
+          {
+            "key": {
+              "type": "TIME_SERIES",
+              "key": "computedValue"
+            },
+            "valueType": "NUMERIC",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "GREATER",
+                  "value": {
+                    "defaultValue": 0
+                  },
+                  "type": "NUMERIC"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      },
+      "50d7c776-1602-632e-faf8-c7db5aaacea8": {
+        "id": "50d7c776-1602-632e-faf8-c7db5aaacea8",
+        "filter": "Has total_interfaces_power field",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "TIME_SERIES",
+              "key": "total_interfaces_power"
+            },
+            "valueType": "NUMERIC",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "GREATER_OR_EQUAL",
+                  "value": {
+                    "defaultValue": 0
+                  },
+                  "type": "NUMERIC"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      },
+      "b60a3c2d-0e58-6226-989a-b349711c6fdb": {
+        "id": "b60a3c2d-0e58-6226-989a-b349711c6fdb",
+        "filter": "Has energywise field",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "TIME_SERIES",
+              "key": "energywise"
+            },
+            "valueType": "NUMERIC",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "GREATER_OR_EQUAL",
+                  "value": {
+                    "defaultValue": 0
+                  },
+                  "type": "NUMERIC"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      },
+      "9fa36a11-dfe8-0507-fd66-b852c4861bbf": {
+        "id": "9fa36a11-dfe8-0507-fd66-b852c4861bbf",
+        "filter": "Has GigabitEthernet1/0/13_power field",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "TIME_SERIES",
+              "key": "GigabitEthernet1/0/13_power"
+            },
+            "valueType": "NUMERIC",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "GREATER_OR_EQUAL",
+                  "value": {
+                    "defaultValue": 0
+                  },
+                  "type": "NUMERIC"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      },
+      "5d59eaf0-9181-a053-fe36-4cd862bd809e": {
+        "id": "5d59eaf0-9181-a053-fe36-4cd862bd809e",
+        "filter": "Has GigabitEthernet1/0/14_power field",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "TIME_SERIES",
+              "key": "GigabitEthernet1/0/14_power"
+            },
+            "valueType": "NUMERIC",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "GREATER_OR_EQUAL",
+                  "value": {
+                    "defaultValue": 0
+                  },
+                  "type": "NUMERIC"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      },
+      "4313ac96-639f-8f63-51f8-5b4d8c7538da": {
+        "id": "4313ac96-639f-8f63-51f8-5b4d8c7538da",
+        "filter": "Has energywise and is active",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "ATTRIBUTE",
+              "key": "active"
+            },
+            "valueType": "BOOLEAN",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "EQUAL",
+                  "value": {
+                    "defaultValue": true,
+                    "dynamicValue": null
+                  },
+                  "type": "BOOLEAN"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          },
+          {
+            "key": {
+              "type": "TIME_SERIES",
+              "key": "energywise"
+            },
+            "valueType": "NUMERIC",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "GREATER_OR_EQUAL",
+                  "value": {
+                    "defaultValue": 0
+                  },
+                  "type": "NUMERIC"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      },
+      "a28f611b-0669-d817-d7f5-c11ccb0b2118": {
+        "id": "a28f611b-0669-d817-d7f5-c11ccb0b2118",
+        "filter": "Has total_interfaces_power and is active",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "ATTRIBUTE",
+              "key": "active"
+            },
+            "valueType": "BOOLEAN",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "EQUAL",
+                  "value": {
+                    "defaultValue": true,
+                    "dynamicValue": null
+                  },
+                  "type": "BOOLEAN"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          },
+          {
+            "key": {
+              "type": "TIME_SERIES",
+              "key": "total_interfaces_power"
+            },
+            "valueType": "NUMERIC",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "GREATER_OR_EQUAL",
+                  "value": {
+                    "defaultValue": 0
+                  },
+                  "type": "NUMERIC"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      },
+      "6493a2cf-4df5-047d-2761-9187b26585ac": {
+        "id": "6493a2cf-4df5-047d-2761-9187b26585ac",
+        "filter": "Switch type and Name ends with _1 and not active",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "ATTRIBUTE",
+              "key": "active"
+            },
+            "valueType": "BOOLEAN",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "EQUAL",
+                  "value": {
+                    "defaultValue": false,
+                    "dynamicValue": null
+                  },
+                  "type": "BOOLEAN"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          },
+          {
+            "key": {
+              "type": "ENTITY_FIELD",
+              "key": "name"
+            },
+            "valueType": "STRING",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "ENDS_WITH",
+                  "value": {
+                    "defaultValue": "_1",
+                    "dynamicValue": null
+                  },
+                  "ignoreCase": false,
+                  "type": "STRING"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          },
+          {
+            "key": {
+              "type": "ENTITY_FIELD",
+              "key": "type"
+            },
+            "valueType": "STRING",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "EQUAL",
+                  "value": {
+                    "defaultValue": "switch",
+                    "dynamicValue": null
+                  },
+                  "ignoreCase": false,
+                  "type": "STRING"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      },
+      "67ccbc50-cbcb-ebcd-61b2-9d3966978052": {
+        "id": "67ccbc50-cbcb-ebcd-61b2-9d3966978052",
+        "filter": "Switch type and Name ends in _1 and active",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "ATTRIBUTE",
+              "key": "active"
+            },
+            "valueType": "BOOLEAN",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "EQUAL",
+                  "value": {
+                    "defaultValue": true,
+                    "dynamicValue": null
+                  },
+                  "type": "BOOLEAN"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          },
+          {
+            "key": {
+              "type": "ENTITY_FIELD",
+              "key": "name"
+            },
+            "valueType": "STRING",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "ENDS_WITH",
+                  "value": {
+                    "defaultValue": "_1",
+                    "dynamicValue": null
+                  },
+                  "ignoreCase": false,
+                  "type": "STRING"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          },
+          {
+            "key": {
+              "type": "ENTITY_FIELD",
+              "key": "type"
+            },
+            "valueType": "STRING",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "EQUAL",
+                  "value": {
+                    "defaultValue": "switch",
+                    "dynamicValue": null
+                  },
+                  "ignoreCase": false,
+                  "type": "STRING"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      },
+      "f514ad95-10fe-36e6-d6da-0a4e42142870": {
+        "id": "f514ad95-10fe-36e6-d6da-0a4e42142870",
+        "filter": "Switch type and Name ends in _1",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "ENTITY_FIELD",
+              "key": "name"
+            },
+            "valueType": "STRING",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "ENDS_WITH",
+                  "value": {
+                    "defaultValue": "_1",
+                    "dynamicValue": null
+                  },
+                  "ignoreCase": false,
+                  "type": "STRING"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          },
+          {
+            "key": {
+              "type": "ENTITY_FIELD",
+              "key": "type"
+            },
+            "valueType": "STRING",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "EQUAL",
+                  "value": {
+                    "defaultValue": "switch",
+                    "dynamicValue": null
+                  },
+                  "ignoreCase": false,
+                  "type": "STRING"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": true
+      }
+    },
+    "timewindow": {
+      "hideInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "timewindowMs": 7200000,
+        "quickInterval": "CURRENT_DAY",
+        "interval": 300000
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": true,
+      "showEntitiesSelect": true,
+      "showDashboardTimewindow": true,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true
+    }
+  },
+  "externalId": null,
+  "name": "Large venue - Switches - Main"
+}

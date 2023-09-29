@@ -1,0 +1,128 @@
+version: "3.4"
+services:
+  onboard:
+    build:
+      context: ./onboard
+      args:
+        HTTPS_PROXY: $HTTPS_PROXY
+    container_name: onboard
+    hostname: onboard
+    command: ./onboard/onboard.sh
+    volumes:
+      - "./onboard:/onboard:rw"
+      - "./utils:/onboard/utils:ro"
+    env_file:
+      - .env
+
+    networks:
+      - green
+    restart: on-failure
+
+  streamer-switches:
+    build:
+      context: ./streamer
+      args:
+        HTTPS_PROXY: $HTTPS_PROXY
+    container_name: streamer-switches
+    hostname: streamer-switches
+    #depends_on:
+    #  onboard:
+    #    condition: service_completed_successfully
+    command: python3 -m streamer.pyats-power.streamer_switches # --dry-run
+    volumes:
+      - "./streamer/pyats-power:/streamer/pyats-power"
+      - "./utils:/streamer/utils:ro"
+      - "./onboard:/onboard:ro"
+    env_file:
+      - .env
+
+    networks:
+      - green
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "10"
+    restart: always
+
+  streamer-switches-extra:
+    build:
+      context: ./streamer
+      args:
+        HTTPS_PROXY: $HTTPS_PROXY
+    container_name: streamer-switches-extra
+    hostname: streamer-switches-extra
+    #depends_on:
+    #  onboard:
+    #    condition: service_completed_successfully
+    command: python3 -m streamer.pyats-power.streamer_switches_extra --testbedyml=/onboard/minimal-testbed.yml #--dry-run
+    volumes:
+      - "./streamer/pyats-power:/streamer/pyats-power"
+      - "./utils:/streamer/utils:ro"
+      - "./onboard:/onboard:ro"
+    env_file:
+      - .env
+
+    networks:
+      - green
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "10"
+    restart: always
+
+  streamer-aps:
+    build:
+      context: ./streamer
+      args:
+        HTTPS_PROXY: $HTTPS_PROXY
+    container_name: streamer-aps
+    hostname: streamer-aps
+    #depends_on:
+    #  onboard:
+    #    condition: service_completed_successfully
+    command: python3 -m streamer.pyats-power.streamer_aps
+    volumes:
+      - "./streamer/pyats-power:/streamer/pyats-power"
+      - "./utils:/streamer/utils:ro"
+      - "./onboard:/onboard:ro"
+    env_file:
+      - .env
+
+    networks:
+      - green
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "10"
+    restart: always
+
+  exporter:
+    build:
+      context: ./exporter
+      args:
+        HTTPS_PROXY: $HTTPS_PROXY
+    container_name: exporter
+    hostname: exporter
+
+    command: python3 exporter.py
+    volumes:
+      - "./exporter:/exporter"
+      - "./utils:/exporter/utils:ro"
+      - "./onboard:/onboard:ro"
+    env_file:
+      - .env
+
+    networks:
+      - green
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "10"
+
+networks:
+  green:
+    driver: bridge

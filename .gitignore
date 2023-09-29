@@ -1,0 +1,19 @@
+.DS_Store
+__pycache__/
+.env
+.venv
+
+dhall-packages
+
+# Ignore generated config files
+config-generator/1.dhall/output/*.dhall
+config-generator/2.yaml/output/*.yml
+onboard/testbed.yml
+onboard/yaml/*.yml
+
+# Ignore local data
+streamer/pyats-power/output
+streamer/pyats-power/extra-output
+
+# Ignore exported data
+exporter/data
